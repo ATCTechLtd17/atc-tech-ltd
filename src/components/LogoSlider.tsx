@@ -5,12 +5,12 @@ const LogoSlider = () => {
   const containerRef = useRef(null);
   
   const logos = [
-    { id: 1, name: 'Bacco', src: 'https://i.ibb.co.com/1tsPBzDz/bacco.png' },
-    { id: 2, name: 'Hi Tech Park', src: 'https://i.ibb.co.com/Ng62TnYh/HITech.jpg' },
-    { id: 3, name: 'BIDA', src: 'https://i.ibb.co.com/ZpQDwR43/logo-for-jsln.png' },
-    { id: 4, name: 'BASIS', src: 'https://i.ibb.co.com/B2ctnWfh/Basis-removebg-preview.png' },
-    { id: 5, name: 'ISO', src: 'https://i.ibb.co.com/GvhqWBp6/iso.png' },
-    { id: 6, name: 'BTRC', src: 'https://i.ibb.co.com/9QzTz7z/btrc.png' }
+    { id: 1, name: 'Bacco', src: 'https://res.cloudinary.com/dufs2ywc7/image/upload/v1742378110/bacco_ojngfu.png' },
+    { id: 2, name: 'Hi Tech Park', src: 'https://res.cloudinary.com/dufs2ywc7/image/upload/v1742378088/HITech_ydsphd.jpg' },
+    { id: 3, name: 'BIDA', src: 'https://res.cloudinary.com/dufs2ywc7/image/upload/v1742378067/logo-for-jsln_vjzxp8.png' },
+    { id: 4, name: 'BASIS', src: 'https://res.cloudinary.com/dufs2ywc7/image/upload/v1742378040/Basis-removebg-preview_ec6we5.png' },
+    { id: 5, name: 'ISO', src: 'https://res.cloudinary.com/dufs2ywc7/image/upload/v1742378022/iso_mbriok.png' },
+    { id: 6, name: 'BTRC', src: 'https://res.cloudinary.com/dufs2ywc7/image/upload/v1742378000/btrc_l2hcss.png' }
   ];
 
   useEffect(() => {
