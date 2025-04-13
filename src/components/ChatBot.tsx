@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Send, X, MessageCircle } from 'lucide-react';
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, X, MessageCircle } from "lucide-react";
 
 interface Message {
   text: string;
@@ -12,10 +12,15 @@ interface Message {
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [newMessage, setNewMessage] = useState('');
+  const [newMessage, setNewMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // API endpoint URL - should match your backend
+  const API_URL = "http://localhost:3001";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -38,7 +43,8 @@ const ChatBot = () => {
     text: "Hi! I'm Sarah, your virtual assistant. Do you have any questions about our services? I'm here to help! 😊",
     isUser: false,
     timestamp: new Date(),
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
   };
 
   useEffect(() => {
@@ -49,56 +55,68 @@ const ChatBot = () => {
     }
   }, [isOpen]);
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (newMessage.trim()) {
+      // Add user message to chat
       const userMessage: Message = {
         text: newMessage,
         isUser: true,
         timestamp: new Date(),
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop"
+        avatar:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
       };
-      setMessages(prev => [...prev, userMessage]);
-      setNewMessage('');
-      
-      // Simulate typing indicator
+      setMessages((prev) => [...prev, userMessage]);
+
+      // Clear input and show typing indicator
+      setNewMessage("");
       setIsTyping(true);
-      
-      // Simulate bot response with typing delay
-      setTimeout(() => {
+      setError(null);
+
+      try {
+        // Call backend API
+        const response = await fetch(`${API_URL}/chat-gemini`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ question: userMessage.text }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Add bot response with a slight delay to look more natural
+        setTimeout(() => {
+          setIsTyping(false);
+          const botMessage: Message = {
+            text: data.reply,
+            isUser: false,
+            timestamp: new Date(),
+            avatar:
+              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+          };
+          setMessages((prev) => [...prev, botMessage]);
+        }, 500);
+      } catch (err) {
+        console.error("Error fetching from API:", err);
         setIsTyping(false);
-        const botMessage: Message = {
-          text: getBotResponse(newMessage),
+        setError(
+          "Sorry, I couldn't process your request. Please try again later."
+        );
+
+        // Add error message to chat
+        const errorMessage: Message = {
+          text: "Sorry, I couldn't process your request. Please try again later.",
           isUser: false,
           timestamp: new Date(),
-          avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+          avatar:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
         };
-        setMessages(prev => [...prev, botMessage]);
-      }, 1500 + Math.random() * 1000); // Random delay between 1.5-2.5 seconds
-    }
-  };
-
-  const getBotResponse = (message: string): string => {
-    const lowerMessage = message.toLowerCase();
-    
-    if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
-      return "Hello! How can I assist you today? 😊";
-    } else if (lowerMessage.includes('service') || lowerMessage.includes('offer')) {
-      return "We offer a wide range of services including web development, mobile apps, and digital marketing. Which area interests you the most?";
-    } else if (lowerMessage.includes('price') || lowerMessage.includes('cost')) {
-      return "Our pricing varies based on project requirements. Would you like to schedule a free consultation to discuss your specific needs?";
-    } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
-      return "You can reach us through email at contact@atc-tech.com or call us at +1 (555) 123-4567. Would you like me to connect you with our team?";
-    } else if (lowerMessage.includes('thank')) {
-      return "You're welcome! Is there anything else I can help you with?";
-    } else {
-      return "I understand you're interested in learning more. Could you please provide more details about what you're looking for? This will help me assist you better.";
-    }
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
+        setMessages((prev) => [...prev, errorMessage]);
+      }
     }
   };
 
@@ -114,7 +132,7 @@ const ChatBot = () => {
             className="fixed bottom-20 right-4 z-50 bg-white rounded-lg shadow-xl p-4 max-w-xs"
           >
             <div className="flex items-start gap-3">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
                 alt="Sarah"
                 className="w-10 h-10 rounded-full"
@@ -122,7 +140,7 @@ const ChatBot = () => {
               <div className="flex-1">
                 <div className="flex justify-between items-start">
                   <h4 className="font-semibold text-gray-800">Sarah</h4>
-                  <button 
+                  <button
                     onClick={() => setShowPopup(false)}
                     className="text-gray-400 hover:text-gray-600 transition-colors"
                     aria-label="Close popup"
@@ -130,8 +148,11 @@ const ChatBot = () => {
                     <X size={16} />
                   </button>
                 </div>
-                <p className="text-sm text-gray-600">Hi there! 👋 Do you have any questions about our services? I'm here to help!</p>
-                <button 
+                <p className="text-sm text-gray-600">
+                  Hi there! 👋 Do you have any questions about our services? I'm
+                  here to help!
+                </p>
+                <button
                   onClick={() => {
                     setShowPopup(false);
                     setIsOpen(true);
@@ -170,7 +191,7 @@ const ChatBot = () => {
               {/* Chat Header */}
               <div className="p-4 border-b flex justify-between items-center bg-blue-600 text-white rounded-t-lg">
                 <div className="flex items-center gap-3">
-                  <img 
+                  <img
                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
                     alt="Sarah"
                     className="w-8 h-8 rounded-full border-2 border-white"
@@ -193,45 +214,65 @@ const ChatBot = () => {
                 {messages.map((message, index) => (
                   <div
                     key={index}
-                    className={`flex items-end gap-2 ${message.isUser ? 'flex-row-reverse' : 'flex-row'}`}
+                    className={`flex items-end gap-2 ${
+                      message.isUser ? "flex-row-reverse" : "flex-row"
+                    }`}
                   >
                     {!message.isUser && (
-                      <img 
+                      <img
                         src={message.avatar}
                         alt="Sarah"
                         className="w-8 h-8 rounded-full"
                       />
                     )}
-                    <div
-                      className={`max-w-[70%] p-3 rounded-lg ${
-                        message.isUser
-                          ? 'bg-blue-600 text-white rounded-br-none'
-                          : 'bg-gray-100 text-gray-800 rounded-bl-none'
-                      }`}
-                    >
-                      {message.text}
-                    </div>
+
                     {message.isUser && (
-                      <img 
+                      <img
                         src={message.avatar}
                         alt="You"
                         className="w-8 h-8 rounded-full"
                       />
                     )}
+
+                    <div
+                      className={`max-w-[70%] p-3 rounded-lg ${
+                        message.isUser
+                          ? "bg-blue-600 text-white rounded-br-none"
+                          : "bg-gray-100 text-gray-800 rounded-bl-none"
+                      }`}
+                    >
+                      {/* Handle HTML responses from backend */}
+                      {message.isUser ? (
+                        message.text
+                      ) : (
+                        <div
+                          dangerouslySetInnerHTML={{ __html: message.text }}
+                        />
+                      )}
+                    </div>
                   </div>
                 ))}
                 {isTyping && (
                   <div className="flex items-end gap-2">
-                    <img 
+                    <img
                       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
                       alt="Sarah"
                       className="w-8 h-8 rounded-full"
                     />
                     <div className="bg-gray-100 text-gray-800 p-3 rounded-lg rounded-bl-none">
                       <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: "0ms" }}
+                        ></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: "150ms" }}
+                        ></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: "300ms" }}
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -246,13 +287,24 @@ const ChatBot = () => {
                     type="text"
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
-                    onKeyPress={handleKeyPress}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSendMessage();
+                      }
+                    }}
                     placeholder="Type your message..."
-                    className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                    disabled={isTyping}
                   />
                   <button
                     onClick={handleSendMessage}
-                    className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    disabled={isTyping || !newMessage.trim()}
+                    className={`p-2 rounded-lg transition-colors ${
+                      isTyping || !newMessage.trim()
+                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-blue-600 text-white hover:bg-blue-700"
+                    }`}
                   >
                     <Send size={20} />
                   </button>
