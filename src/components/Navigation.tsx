@@ -2,44 +2,85 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ShinyButtons from './ShinyButtons';
+// For React Router, if you're using it
+// import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  // If using React Router:
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
   const navItems = [
-    { href: '#home', label: 'Home' },
-    { href: '#services', label: 'Services' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' }
+    { href: '/', label: 'Home'},
+    { href: '/services', label: 'Services'},
+    { href: '/impact', label: 'Impact'},
+    { href: '/contact', label: 'Contact'},
   ];
 
   useEffect(() => {
+    // Set active section based on current path
+    const currentPath = window.location.pathname.replace('/', '');
+    if (currentPath) {
+      setActiveSection(currentPath || 'home');
+    }
+
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      // Only track scroll-based sections when on home page
+      if (window.location.pathname === '/' || window.location.pathname === '/home') {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      sections.forEach(section => {
-        const sectionTop = (section as HTMLElement).offsetTop;
-        const sectionHeight = section.clientHeight;
-        const sectionId = section.getAttribute('id') || '';
+        sections.forEach((section) => {
+          const sectionTop = (section as HTMLElement).offsetTop;
+          const sectionHeight = section.clientHeight;
+          const sectionId = section.getAttribute('id') || '';
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          setActiveSection(sectionId);
-        }
-      });
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            setActiveSection(sectionId);
+          }
+        });
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  // Handle navigation for both hash links and regular navigation
+  const handleNavigation = (href: string) => {
+    // Close mobile menu
     setIsOpen(false);
+    
+    // If using React Router, uncomment the relevant parts
+    if (href.startsWith('#')) {
+      // Check if we're on the home page
+      if (window.location.pathname === '/' || window.location.pathname === '/home') {
+        // We're on the home page, just scroll to the element
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // We're not on the home page, navigate to home with hash
+        window.location.href = '/' + href;
+        // If using React Router:
+        // navigate('/' + href);
+      }
+    } else {
+      // Regular navigation
+      window.location.href = href;
+      // If using React Router:
+      // navigate(href);
+    }
+  };
+
+  // Helper function to determine if a nav item is active
+  const isNavItemActive = (href: string) => {
+    // Remove leading slash for comparison
+    const pathWithoutSlash = href.replace('/', '');
+    return activeSection === pathWithoutSlash;
   };
 
   return (
@@ -50,18 +91,18 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8 flex-1">
             {navItems.slice(0, 2).map((item) => (
               <a
-                key={item.href}
                 href={item.href}
+                key={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(item.href);
+                  handleNavigation(item.href);
                 }}
                 className={`text-gray-300 hover:text-white transition-colors font-semibold relative ${
-                  activeSection === item.href.slice(1) ? 'text-white' : ''
+                  isNavItemActive(item.href) ? 'text-white' : ''
                 }`}
               >
                 {item.label}
-                {activeSection === item.href.slice(1) && (
+                {isNavItemActive(item.href) && (
                   <motion.div
                     layoutId="activeSection"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
@@ -71,18 +112,18 @@ export default function Navigation() {
             ))}
             {navItems.slice(2).map((item) => (
               <a
-                key={item.href}
                 href={item.href}
+                key={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(item.href);
+                  handleNavigation(item.href);
                 }}
                 className={`text-gray-300 hover:text-white transition-colors font-semibold relative ${
-                  activeSection === item.href.slice(1) ? 'text-white' : ''
+                  isNavItemActive(item.href) ? 'text-white' : ''
                 }`}
               >
                 {item.label}
-                {activeSection === item.href.slice(1) && (
+                {isNavItemActive(item.href) && (
                   <motion.div
                     layoutId="activeSection"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
@@ -93,18 +134,18 @@ export default function Navigation() {
           </div>
 
           {/* Logo */}
-          <a 
-            href="#home" 
-            className="mx-auto" 
+          <a
+            href="/"
+            className="mx-auto"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('#home');
+              handleNavigation('/');
             }}
           >
             <img
-              src="https://i.ibb.co.com/jZPHxZSy/ATC-Logo-white-1.png"
+              src="https://res.cloudinary.com/dufs2ywc7/image/upload/v1742376697/ATC_sh8p3m.png"
               alt="ATC Tech Logo"
-              className="h-8 md:h-12 transition-transform hover:scale-105"
+              className="h-[100px]  md:h-[160px]  transition-transform hover:scale-105"
             />
           </a>
 
@@ -140,14 +181,14 @@ export default function Navigation() {
             <div className="px-4 py-4">
               {navItems.map((item) => (
                 <a
-                  key={item.href}
                   href={item.href}
+                  key={item.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(item.href);
+                    handleNavigation(item.href);
                   }}
                   className={`block py-3 text-lg ${
-                    activeSection === item.href.slice(1)
+                    isNavItemActive(item.href)
                       ? 'text-white font-bold'
                       : 'text-gray-300 hover:text-white'
                   }`}
@@ -156,7 +197,8 @@ export default function Navigation() {
                 </a>
               ))}
               <div className="mt-4 space-y-4">
-                <ShinyButtons mobile />
+                
+                <ShinyButtons  />
               </div>
             </div>
           </motion.div>
