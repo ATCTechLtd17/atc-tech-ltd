@@ -12,6 +12,7 @@ import DeliveryPolicy from "../components/DeliveryPolicy";
 import Projects from "../components/Projects";
 import Loading from "../components/Loading";
 import Home from "../pages/Home";
+import Contact from "../components/Contact";
 
 
 
@@ -38,6 +39,14 @@ export const router = createBrowserRouter([
         element:(
           <Suspense fallback={<Loading />}>
           <Services/>
+        </Suspense>
+        )
+      },
+      {
+        path:"contact",
+        element:(
+          <Suspense fallback={<Loading />}>
+          <Contact/>
         </Suspense>
         )
       },

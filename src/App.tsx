@@ -39,8 +39,6 @@ export const App = () => {
         >
           <div className="flex flex-col items-center">
           <Loading/>
-            
-          
           </div>
         </motion.div>
       ) : (
