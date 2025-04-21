@@ -126,20 +126,18 @@ export default function Home(): JSX.Element {
       {/* Logo Slider */}
       <LogoSlider />
 
-      {/* Services Section */}
+     
       <div id="services">
         <Services />
       </div>
 
-      {/* Projects Section */}
+     
       
       <Projects/>
-      {/* Contact Section */}
+    
       <Contact/>
 
-      {/* Footer Section */}
-      
-      {/* Scroll to Top Button */}
+    
       
     </div>
   );
