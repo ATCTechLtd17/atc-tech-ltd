@@ -2,32 +2,29 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ShinyButtons from './ShinyButtons';
-// For React Router, if you're using it
-// import { useNavigate, useLocation } from 'react-router-dom';
+
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  // If using React Router:
-  // const navigate = useNavigate();
-  // const location = useLocation();
-
+ 
   const navItems = [
     { href: '/', label: 'Home'},
     { href: '/services', label: 'Services'},
-    { href: '/impact', label: 'Impact'},
+    { href: '/products', label: 'Our Products'},
     { href: '/contact', label: 'Contact'},
+    
   ];
 
   useEffect(() => {
-    // Set active section based on current path
+   
     const currentPath = window.location.pathname.replace('/', '');
     if (currentPath) {
       setActiveSection(currentPath || 'home');
     }
 
     const handleScroll = () => {
-      // Only track scroll-based sections when on home page
+    
       if (window.location.pathname === '/' || window.location.pathname === '/home') {
         const sections = document.querySelectorAll('section[id]');
         const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -48,37 +45,35 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle navigation for both hash links and regular navigation
+  
   const handleNavigation = (href: string) => {
-    // Close mobile menu
+ 
     setIsOpen(false);
     
-    // If using React Router, uncomment the relevant parts
+  
     if (href.startsWith('#')) {
-      // Check if we're on the home page
+    
       if (window.location.pathname === '/' || window.location.pathname === '/home') {
-        // We're on the home page, just scroll to the element
+    
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        // We're not on the home page, navigate to home with hash
+      
         window.location.href = '/' + href;
-        // If using React Router:
-        // navigate('/' + href);
+      
       }
     } else {
-      // Regular navigation
+      
       window.location.href = href;
-      // If using React Router:
-      // navigate(href);
+    
     }
   };
 
-  // Helper function to determine if a nav item is active
+  
   const isNavItemActive = (href: string) => {
-    // Remove leading slash for comparison
+  
     const pathWithoutSlash = href.replace('/', '');
     return activeSection === pathWithoutSlash;
   };

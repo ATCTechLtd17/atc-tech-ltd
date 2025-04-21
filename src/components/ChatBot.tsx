@@ -20,7 +20,7 @@ const ChatBot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // API endpoint URL - should match your backend
-  const API_URL = "http://localhost:3001";
+  const API_URL = "https://server.atctechltd.com";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -44,7 +44,7 @@ const ChatBot = () => {
     isUser: false,
     timestamp: new Date(),
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+      "https://res.cloudinary.com/dzjrfgasn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744547096/photo-1681164315947-0f117a6dbbf7_o0agaz.avif",
   };
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const ChatBot = () => {
         isUser: true,
         timestamp: new Date(),
         avatar:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+          "https://res.cloudinary.com/dzjrfgasn/image/upload/v1744547258/user_unzp0d.png",
       };
       setMessages((prev) => [...prev, userMessage]);
 
@@ -96,7 +96,7 @@ const ChatBot = () => {
             isUser: false,
             timestamp: new Date(),
             avatar:
-              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+              "https://res.cloudinary.com/dzjrfgasn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744547096/photo-1681164315947-0f117a6dbbf7_o0agaz.avif",
           };
           setMessages((prev) => [...prev, botMessage]);
         }, 500);
@@ -113,7 +113,7 @@ const ChatBot = () => {
           isUser: false,
           timestamp: new Date(),
           avatar:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+            "https://res.cloudinary.com/dzjrfgasn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744547096/photo-1681164315947-0f117a6dbbf7_o0agaz.avif",
         };
         setMessages((prev) => [...prev, errorMessage]);
       }
@@ -129,11 +129,11 @@ const ChatBot = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-20 right-4 z-50 bg-white rounded-lg shadow-xl p-4 max-w-xs"
+            className="fixed bottom-20 right-4 z-50 bg-white rounded-lg shadow-xl p-4 max-w-xs sm:max-w-sm md:max-w-md"
           >
             <div className="flex items-start gap-3">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+                src="https://res.cloudinary.com/dzjrfgasn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744547096/photo-1681164315947-0f117a6dbbf7_o0agaz.avif"
                 alt="Sarah"
                 className="w-10 h-10 rounded-full"
               />
@@ -176,28 +176,28 @@ const ChatBot = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
               onClick={() => setIsOpen(true)}
-              className="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+              className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
             >
-              <MessageCircle size={20} />
-              Let's Chat
+              <MessageCircle size={18} className="sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base">Let's Chat</span>
             </motion.button>
           ) : (
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
-              className="bg-white rounded-lg shadow-xl w-96 h-[500px] flex flex-col"
+              className="bg-white rounded-lg shadow-xl w-[calc(100vw-2rem)] sm:w-96 md:w-[28rem] lg:w-96 xl:w-[32rem] h-[80vh] sm:h-[500px] flex flex-col"
             >
               {/* Chat Header */}
-              <div className="p-4 border-b flex justify-between items-center bg-blue-600 text-white rounded-t-lg">
-                <div className="flex items-center gap-3">
+              <div className="p-3 sm:p-4 border-b flex justify-between items-center bg-blue-600 text-white rounded-t-lg">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+                    src="https://res.cloudinary.com/dzjrfgasn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744547096/photo-1681164315947-0f117a6dbbf7_o0agaz.avif"
                     alt="Sarah"
-                    className="w-8 h-8 rounded-full border-2 border-white"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-white"
                   />
                   <div>
-                    <h3 className="font-semibold">Sarah</h3>
+                    <h3 className="font-semibold text-sm sm:text-base">Sarah</h3>
                     <p className="text-xs text-blue-100">Online</p>
                   </div>
                 </div>
@@ -205,12 +205,12 @@ const ChatBot = () => {
                   onClick={() => setIsOpen(false)}
                   className="hover:bg-blue-700 p-1 rounded-full transition-colors"
                 >
-                  <X size={20} />
+                  <X size={18} className="sm:w-5 sm:h-5" />
                 </button>
               </div>
 
               {/* Messages Container */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4">
                 {messages.map((message, index) => (
                   <div
                     key={index}
@@ -222,7 +222,7 @@ const ChatBot = () => {
                       <img
                         src={message.avatar}
                         alt="Sarah"
-                        className="w-8 h-8 rounded-full"
+                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
                       />
                     )}
 
@@ -230,12 +230,12 @@ const ChatBot = () => {
                       <img
                         src={message.avatar}
                         alt="You"
-                        className="w-8 h-8 rounded-full"
+                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
                       />
                     )}
 
                     <div
-                      className={`max-w-[70%] p-3 rounded-lg ${
+                      className={`max-w-[75%] sm:max-w-[70%] p-2 sm:p-3 rounded-lg text-sm sm:text-base ${
                         message.isUser
                           ? "bg-blue-600 text-white rounded-br-none"
                           : "bg-gray-100 text-gray-800 rounded-bl-none"
@@ -255,22 +255,22 @@ const ChatBot = () => {
                 {isTyping && (
                   <div className="flex items-end gap-2">
                     <img
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+                      src="https://res.cloudinary.com/dzjrfgasn/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1744547096/photo-1681164315947-0f117a6dbbf7_o0agaz.avif"
                       alt="Sarah"
-                      className="w-8 h-8 rounded-full"
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
                     />
-                    <div className="bg-gray-100 text-gray-800 p-3 rounded-lg rounded-bl-none">
+                    <div className="bg-gray-100 text-gray-800 p-2 sm:p-3 rounded-lg rounded-bl-none">
                       <div className="flex gap-1">
                         <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce"
                           style={{ animationDelay: "0ms" }}
                         ></div>
                         <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce"
                           style={{ animationDelay: "150ms" }}
                         ></div>
                         <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce"
                           style={{ animationDelay: "300ms" }}
                         ></div>
                       </div>
@@ -281,7 +281,7 @@ const ChatBot = () => {
               </div>
 
               {/* Message Input */}
-              <div className="p-4 border-t">
+              <div className="p-3 sm:p-4 border-t">
                 <div className="flex gap-2">
                   <input
                     type="text"
@@ -294,7 +294,7 @@ const ChatBot = () => {
                       }
                     }}
                     placeholder="Type your message..."
-                    className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                    className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 text-sm sm:text-base"
                     disabled={isTyping}
                   />
                   <button
@@ -306,7 +306,7 @@ const ChatBot = () => {
                         : "bg-blue-600 text-white hover:bg-blue-700"
                     }`}
                   >
-                    <Send size={20} />
+                    <Send size={18} className="sm:w-5 sm:h-5" />
                   </button>
                 </div>
               </div>

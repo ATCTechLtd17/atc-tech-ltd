@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
         )
       },
       {
-        path:"impact",
+        path:"products",
         element:(
           <Suspense fallback={<Loading />}>
           <Projects/>
