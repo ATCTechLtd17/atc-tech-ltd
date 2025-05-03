@@ -39,18 +39,18 @@ const Contact = () => {
   const contactInfo: ContactInfo[] = [
     { icon: Mail, label: "Email", value: "support@atctechltd.com", color: "blue" },
     { icon: Phone, label: "Telephone", value: "02588878917-18", color: "blue" },
-    { icon: MapPin, label: "Location", value: "BSMHTP, Joy Silicon Tower, Level # 7, Suit # A, Rajshahi, Bangladesh", color: "gray" }
+    { icon: MapPin, label: "Location", value: "Hi Tech Park, Silicon Tower, Level # 7, Suit # A, Rajshahi, Bangladesh", color: "gray" }
   ];
 
   return (
     <div>
-      <section className="py-12 md:py-20 relative" id="contact">
-        <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+      <section className="relative py-12 md:py-20" id="contact">
+        <div className="px-4 mx-auto mt-20 max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 md:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="bg-black/40 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/10"
+              className="p-6 border bg-black/40 backdrop-blur-sm md:p-8 rounded-2xl border-white/10"
             >
               <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-[#0F79B9] to-[#107EC1] bg-clip-text text-transparent">
                 Bangladesh Office
@@ -62,13 +62,13 @@ const Contact = () => {
                       <item.icon className={`w-6 h-6 text-${item.color}-500`} />
                     </div>
                     <div>
-                      <p className="text-gray-400 text-sm md:text-base">{item.label}</p>
+                      <p className="text-sm text-gray-400 md:text-base">{item.label}</p>
                       <p className="text-base md:text-lg">{item.value}</p>
                     </div>
                   </div>
                 ))}
                 <div className="mt-4">
-                  <p className="text-gray-400 text-sm md:text-base">Additional Email</p>
+                  <p className="text-sm text-gray-400 md:text-base">Additional Email</p>
                   <p className="text-base md:text-lg">atctechltdbd@gmail.com</p>
                 </div>
               </div>
@@ -86,14 +86,14 @@ const Contact = () => {
                 { id: "message", label: "Message", type: "textarea" }
               ].map((field) => (
                 <div key={field.id}>
-                  <label htmlFor={field.id} className="block text-sm md:text-base font-medium text-gray-300 mb-2">
+                  <label htmlFor={field.id} className="block mb-2 text-sm font-medium text-gray-300 md:text-base">
                     {field.label}
                   </label>
                   {field.type === "textarea" ? (
                     <textarea
                       id={field.id}
                       rows={4}
-                      className="w-full px-4 py-3 text-sm md:text-base bg-black/30 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 text-sm transition-colors border rounded-lg md:text-base bg-black/30 border-white/10 focus:outline-none focus:border-blue-500"
                       value={formState[field.id as keyof FormState]}
                       onChange={handleInputChange}
                     />
@@ -101,7 +101,7 @@ const Contact = () => {
                     <input
                       type={field.type}
                       id={field.id}
-                      className="w-full px-4 py-3 text-sm md:text-base bg-black/30 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 text-sm transition-colors border rounded-lg md:text-base bg-black/30 border-white/10 focus:outline-none focus:border-blue-500"
                       value={formState[field.id as keyof FormState]}
                       onChange={handleInputChange}
                     />
