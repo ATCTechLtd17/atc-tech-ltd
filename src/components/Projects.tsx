@@ -79,7 +79,7 @@ const projectsList: ProjectItem[] = [
     ]
   }
 ];
-
+ 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);

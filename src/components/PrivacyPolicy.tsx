@@ -1,109 +1,77 @@
 import React from 'react';
 
-const PrivacyPolicy: React.FC = () => {
+const TermsAndServices: React.FC = () => {
   return (
-    <div className=" text-white font-sans p-6 max-w-4xl mx-auto">
-        <section className=''>
-        <h1 className="text-2xl mt-20 font-bold mb-4">Privacy Policy</h1>
-      
-      <p className="mb-6">
-        At our company, we are committed to protecting the privacy and personal information of our customers. This Privacy Policy outlines how we collect, use, and safeguard your information when you use our website and services.
-      </p>
+    <div className="text-white font-sans p-6 max-w-4xl mx-auto">
+      <section className="mt-20">
+        <h1 className="text-2xl font-bold mb-4">নিয়ম ও শর্তাবলী</h1>
 
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">1. Information We Collect</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong>Personal Information:</strong> When you use our services, we may collect personal information such as your name, email address, contact number, and billing information. This information is necessary to process your requests and provide you with our services.
-          </li>
-          <li>
-            <strong>Usage Information:</strong> We may collect non-personal information about your interactions with our website and services, including your IP address, browser type, device information, and pages visited. This information helps us analyze trends, enhance user experience, and improve our services.
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">2. Use of Information</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            We use your personal information to provide and deliver the services you request, process payments, and communicate with you about your account and any updates or changes to our services.
-          </li>
-          <li>
-            We may use your information to improve our website and services, personalize your experience, and ensure the security and integrity of our systems.
-          </li>
-          <li>
-            We may use aggregated and anonymized data for statistical analysis, research, and marketing purposes.
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">3. Data Security</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction.
-          </li>
-          <li>
-            We regularly review and update our security practices to maintain the confidentiality and integrity of your data.
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">4. Third-Party Disclosure</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            We do not sell, trade, or transfer your personal information to outside parties without your consent, except in cases where it is necessary to provide the requested services or comply with legal requirements.
-          </li>
-          <li>
-            We may share your information with trusted third-party service providers who assist us in operating our website, conducting business, or providing services on our behalf. These third parties are required to maintain the confidentiality of your information.
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">5. Cookies and Tracking Technologies</h2>
-        <p className="mb-2">
-          We use cookies and similar tracking technologies to enhance your experience on our website, analyze trends, and gather information about user behavior. You have the option to disable cookies in your browser settings, but this may limit certain features and functionality of our website.
+        <p className="mb-6">
+          আমাদের ওয়েবসাইটে স্বাগতম! এই নিয়ম ও শর্তাবলী ("চুক্তি") আমাদের ওয়েবসাইট এবং এর মাধ্যমে প্রদত্ত সেবাসমূহ ব্যবহারের নীতিমালা নির্ধারণ করে। আপনি ওয়েবসাইট ব্যবহার শুরু করার আগে অনুগ্রহ করে এই চুক্তিটি মনোযোগ দিয়ে পড়ুন। আপনি যদি আমাদের ওয়েবসাইট অ্যাক্সেস বা ব্যবহার করেন, তবে ধরে নেওয়া হবে যে আপনি এই চুক্তির সকল শর্ত মেনে নিতে সম্মত হয়েছেন। যদি আপনি এই চুক্তির কোনো শর্তে সম্মত না হন, তাহলে ওয়েবসাইটটি ব্যবহার করা থেকে বিরত থাকুন।
         </p>
-      </div>
 
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">6. Links to Third-Party Websites</h2>
-        <p className="mb-2">
-          Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these websites. We encourage you to review the privacy policies of any third-party websites you visit.
-        </p>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">7. Children's Privacy</h2>
-        <p className="mb-2">
-          Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us, and we will promptly delete such information.
-        </p>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">8. Changes to the Privacy Policy</h2>
-        <p className="mb-2">
-          We may update this Privacy Policy from time to time. Any changes will be posted on our website, and the revised policy will be effective immediately upon posting.
-        </p>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">9. Contact Us</h2>
-        <p className="mb-2">
-          If you have any questions or concerns about our Privacy Policy or the handling of your personal information, please contact our Privacy Officer at <a href="mailto:support@techsite.com" className="text-blue-400 hover:underline">support@techsite.com</a>
-        </p>
-      </div>
-
-      <p className="mt-8 text-sm">
-        By using our website and services, you consent to the collection, use, and disclosure of your information as described in this Privacy Policy.
-      </p>
-   
-        </section>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">১. আমাদের সেবা</h2>
+          <p className="mb-2">
+            আমাদের ওয়েবসাইট বাংলাদেশ থেকে যুক্তরাষ্ট্রসহ বিভিন্ন অঞ্চলে বিভিন্ন ধরনের সেবা প্রদান করে। এর মধ্যে পণ্য ক্রয়-বিক্রয়, ভ্রমণ সংক্রান্ত বুকিং এবং তথ্য প্রদান অন্তর্ভুক্ত, তবে এসব সেবার মধ্যে সীমাবদ্ধ নয়। সেবার প্রাপ্যতা সময়ভেদে পরিবর্তিত হতে পারে এবং আমরা পূর্ব ঘোষণা ছাড়াই যেকোনো পরিবর্তনের অধিকার সংরক্ষণ করি।
+          </p>
         </div>
-      
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">২. ব্যবহারকারীর দায়িত্ব</h2>
+          <p className="mb-2">
+            ওয়েবসাইট ব্যবহারের সময় আপনাকে অবশ্যই সঠিক এবং সম্পূর্ণ তথ্য প্রদান করতে হবে। আপনি আপনার অ্যাকাউন্টের ব্যবহারসংক্রান্ত সকল তথ্য এবং পাসওয়ার্ডের নিরাপত্তার জন্য নিজেই দায়ী থাকবেন। কোনো ধরনের অননুমোদিত ব্যবহার বা নিরাপত্তা লঙ্ঘনের ঘটনা ঘটলে আমাদেরকে তা দ্রুত জানাতে হবে।
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">৩. নিষিদ্ধ কার্যকলাপ</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>আপনি ওয়েবসাইট ব্যবহার করার সময় নিচের যেকোনো কাজ থেকে বিরত থাকবেন:</li>
+            <li>প্রযোজ্য আইন, নীতিমালা বা তৃতীয় পক্ষের অধিকার লঙ্ঘন করা।</li>
+            <li>ভুয়া পরিচয় ব্যবহার করা বা অন্য কারও পরিচয়ে প্রতারণা করা।</li>
+            <li>ওয়েবসাইট বা সংশ্লিষ্ট সার্ভার ও নেটওয়ার্কে বাধা সৃষ্টি করা।</li>
+            <li>সিস্টেমে অবৈধ প্রবেশ বা প্রতারণামূলক কর্মকাণ্ডে যুক্ত হওয়া।</li>
+            <li>ভাইরাস বা ক্ষতিকর সফটওয়্যার আপলোড বা প্রেরণ করা।</li>
+            <li>অন্যান্য ব্যবহারকারীর ব্যক্তিগত তথ্য তাদের অনুমতি ছাড়া সংগ্রহ বা সংরক্ষণ করা।</li>
+          </ul>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">৪.অবিভাজ্য সম্পত্তি
+</h2>
+          <p className="mb-2">
+            এই ওয়েবসাইটে প্রদর্শিত সব কনটেন্ট যেমন—লেখা, গ্রাফিক্স, লোগো, ছবি ও সফটওয়্যার—আমাদের বা আমাদের লাইসেন্সদাতার মালিকানাধীন এবং প্রযোজ্য কপিরাইট ও বৌদ্ধিক সম্পত্তি আইনের দ্বারা সুরক্ষিত। আমাদের পূর্বলিখিত অনুমতি ছাড়া এই কনটেন্ট ব্যবহার, সম্পাদনা, কপি বা বিতরণ করা সম্পূর্ণরূপে নিষিদ্ধ।
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">৫. দায়বদ্ধতার সীমাবদ্ধতা</h2>
+          <p className="mb-2">
+            আমরা আমাদের ওয়েবসাইটে নির্ভুল ও আপডেটেড তথ্য দিতে চেষ্টা করি। তবে, প্রদত্ত তথ্য বা সেবার নির্ভুলতা, নির্ভরযোগ্যতা বা পরিপূর্ণতা সম্পর্কে কোনো নিশ্চয়তা দেওয়া হয় না। ওয়েবসাইট ব্যবহার বা এর সঙ্গে সংশ্লিষ্ট যেকোনো সরাসরি বা পরোক্ষ ক্ষতির জন্য আমরা দায়ী থাকবো না।
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">৬. প্রযোজ্য আইন ও বিচারব্যবস্থা</h2>
+          <p className="mb-2">
+            এই চুক্তি বাংলাদেশের প্রচলিত আইন অনুযায়ী পরিচালিত হবে এবং এই চুক্তি থেকে উদ্ভূত যেকোনো বিরোধ বাংলাদেশের আদালতে নিষ্পত্তি হবে।
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-2">৭. চুক্তির পরিবর্তন</h2>
+          <p className="mb-2">
+            আমরা যেকোনো সময় এই চুক্তির শর্তাবলী পরিবর্তন বা হালনাগাদ করার অধিকার রাখি। পরিবর্তনসমূহ ওয়েবসাইটে প্রকাশের পর তাৎক্ষণিকভাবে কার্যকর হবে। আপনি যদি ওয়েবসাইট ব্যবহার অব্যাহত রাখেন, তাহলে ধরে নেওয়া হবে আপনি পরিবর্তিত চুক্তিতে সম্মতি দিয়েছেন।
+          </p>
+        </div>
+
+        <p className="mt-8">
+          অনুগ্রহ করে এই চুক্তি সময় সময় পর্যালোচনা করুন, যেন আপনি সর্বশেষ সংস্করণ সম্পর্কে অবগত থাকেন। এই নিয়ম ও শর্তাবলী নিয়ে আপনার কোনো প্রশ্ন বা উদ্বেগ থাকলে আমাদের সাথে যোগাযোগ করুন।
+        </p>
+      </section>
+    </div>
   );
 };
 
-export default PrivacyPolicy;
+export default TermsAndServices;

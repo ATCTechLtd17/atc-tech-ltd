@@ -13,12 +13,7 @@ import Projects from "../components/Projects";
 import Loading from "../components/Loading";
 import Home from "../pages/Home";
 import Contact from "../components/Contact";
-
-
-
-// Lazy load pages
-
-
+import CompliancePolicy from "../components/CompliancePolicy";
 
 export const router = createBrowserRouter([
   {
@@ -67,7 +62,7 @@ export const router = createBrowserRouter([
         )
       },
       {
-        path:"privacy",
+        path:"privacy-policy-t&c",
         element:(
           <Suspense fallback={<Loading />}>
           <PrivacyPolicy/>
@@ -110,7 +105,7 @@ export const router = createBrowserRouter([
         path:"report",
         element:(
           <Suspense fallback={<Loading/>}>
-          <DeliveryPolicy/>
+          <CompliancePolicy/>
         </Suspense>
         )
       },

@@ -79,12 +79,11 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center gap-6 py-4 border-t border-white/10">
   {[
     { label: 'About Us', path: '/aboutUs' },
-    { label: 'Privacy Policy', path: '/privacy' },
-    { label: 'Terms of Service', path: '/terms' },
-    { label: 'Refund Policy', path: '/refund' },
-    { label: 'Fraud Policy', path: '/fraud' },
-    { label: 'Delivery Policy', path: '/delivery' },
-    { label: 'Compliance Report', path: '/report' }
+    { label: 'Privacy Policy, Terms & Conditions', path: '/privacy-policy-t&c' },
+   
+    { label: 'Refund & Return', path: '/refund' },
+  
+    
   ].map((item) => (
     <a 
       key={item.path}

@@ -1,10 +1,12 @@
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from 'framer-motion';
 
-const ShinyButton = ({ href, gradient, children }) => {
+const ShinyButton = ({ href, gradient, children }:any) => {
   return (
     <motion.a
       href={href}
+      target="_blank"                   /* Opens in a new tab */
+      rel="noopener noreferrer"         /* Prevents security vulnerabilities */
       className={`
         relative px-2 py-1 rounded-2xl shadow-lg 
         overflow-hidden group
@@ -13,7 +15,7 @@ const ShinyButton = ({ href, gradient, children }) => {
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
-      {/* Shine effect */}
+      
       <motion.div
         className="absolute inset-0 w-full h-full"
         initial={{

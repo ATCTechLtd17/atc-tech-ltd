@@ -1,72 +1,73 @@
+
 import React from 'react';
 
 const TermsAndServices: React.FC = () => {
   return (
     <div className=" text-white font-sans p-6 max-w-4xl mx-auto">
       <section className='mt-20'>
-      <h1 className="text-2xl font-bold mb-4">Terms and Services</h1>
-      
+      <h1 className="text-2xl font-bold mb-4">শর্তাবলী</h1>
+
       <p className="mb-6">
-        Welcome to our website! These Terms and Conditions ("Agreement") govern your use of our website and the services we offer. Please read this Agreement carefully before using our website. By accessing or using our website, you agree to be bound by this Agreement. If you do not agree with any part of this Agreement, you may not access or use our website.
+        আমাদের ওয়েবসাইটে আপনাকে স্বাগতম! এই শর্তাবলী ("চুক্তি") আমাদের ওয়েবসাইটের ব্যবহার এবং আমরা যে পরিষেবাগুলি অফার করি তা নিয়ন্ত্রণ করে। আমাদের ওয়েবসাইট ব্যবহার করার আগে দয়া করে এই চুক্তিটি মনোযোগ সহকারে পড়ুন। আমাদের ওয়েবসাইট অ্যাক্সেস বা ব্যবহার করে, আপনি এই চুক্তির দ্বারা আবদ্ধ হতে সম্মত হচ্ছেন। আপনি যদি এই চুক্তির কোনও অংশের সাথে একমত না হন তবে আপনি আমাদের ওয়েবসাইট অ্যাক্সেস বা ব্যবহার করতে পারবেন না।
       </p>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">1. Services</h2>
+        <h2 className="text-xl font-bold mb-2">১. সেবাসমূহ</h2>
         <p className="mb-2">
-          Our website offers services from Bangladesh to the USA. These services may include but are not limited to the purchase and delivery of goods, booking of travel arrangements, and access to information related to these services. The availability of specific services may vary and is subject to change without notice.
+          আমাদের ওয়েবসাইট বাংলাদেশ থেকে মার্কিন যুক্তরাষ্ট্রে পরিষেবা সরবরাহ করে। এই পরিষেবাগুলিতে পণ্য ক্রয় এবং বিতরণ, ভ্রমণের ব্যবস্থা বুকিং এবং এই পরিষেবা সম্পর্কিত তথ্যে প্রবেশাধিকার অন্তর্ভুক্ত থাকতে পারে তবে সীমাবদ্ধ নয়। নির্দিষ্ট পরিষেবার প্রাপ্যতা পরিবর্তিত হতে পারে এবং বিজ্ঞপ্তি ছাড়াই পরিবর্তন সাপেক্ষে।
         </p>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">2. User Responsibilities</h2>
+        <h2 className="text-xl font-bold mb-2">২. ব্যবহারকারীর দায়িত্ব</h2>
         <p className="mb-2">
-          When using our website, you agree to provide accurate and complete information about yourself as required. You are responsible for maintaining the confidentiality of any account credentials or passwords associated with your use of our website. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.
+          আমাদের ওয়েবসাইট ব্যবহার করার সময়, আপনি নিজের সম্পর্কে প্রয়োজনীয় হিসাবে সঠিক এবং সম্পূর্ণ তথ্য সরবরাহ করতে সম্মত হচ্ছেন। আমাদের ওয়েবসাইটের আপনার ব্যবহারের সাথে সম্পর্কিত যে কোনও অ্যাকাউন্টের শংসাপত্র বা পাসওয়ার্ডগুলির গোপনীয়তা বজায় রাখার জন্য আপনি দায়বদ্ধ। আপনি আপনার অ্যাকাউন্টের কোনও অননুমোদিত ব্যবহার বা সুরক্ষার অন্য কোনও লঙ্ঘনের বিষয়ে অবিলম্বে আমাদের অবহিত করতে সম্মত হচ্ছেন।
         </p>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">3. Prohibited Activities</h2>
+        <h2 className="text-xl font-bold mb-2">৩. নিষিদ্ধ কার্যক্রম</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>You agree not to engage in any of the following activities while using our website:</li>
-          <li>Violating any applicable laws, regulations, or third-party rights.</li>
-          <li>Impersonating any person or entity, or falsely stating or misrepresenting your affiliation with a person or entity.</li>
-          <li>Interfering with or disrupting the operation of our website or the servers or networks connected to our website.</li>
-          <li>Engaging in any form of fraudulent activity or unauthorized access to our website or systems.</li>
-          <li>Uploading or transmitting viruses, worms, or any other malicious code that may harm our website or the systems of other users.</li>
-          <li>Collecting or storing personal data about other users without their consent.</li>
+          <li>আপনি আমাদের ওয়েবসাইট ব্যবহার করার সময় নিম্নলিখিত কোনও ক্রিয়াকলাপে জড়িত না হতে সম্মত হচ্ছেন:</li>
+          <li>কোনও প্রযোজ্য আইন, বিধি বা তৃতীয় পক্ষের অধিকার লঙ্ঘন করা।</li>
+          <li>অন্য কোনও ব্যক্তি বা সত্তার ছদ্মবেশ ধারণ করা, বা কোনও ব্যক্তি বা সত্তার সাথে আপনার وابستگی সম্পর্কে মিথ্যা বিবৃতি দেওয়া বা ভুলভাবে উপস্থাপন করা।</li>
+          <li>আমাদের ওয়েবসাইট বা আমাদের ওয়েবসাইটের সাথে সংযুক্ত সার্ভার বা নেটওয়ার্কগুলির পরিচালনায় হস্তক্ষেপ বা বিঘ্ন ঘটানো।</li>
+          <li>আমাদের ওয়েবসাইট বা সিস্টেমে কোনও ধরণের প্রতারণামূলক কার্যকলাপ বা অননুমোদিত অ্যাক্সেসে জড়িত হওয়া।</li>
+          <li>ভাইরাস, ওয়ার্ম বা অন্য কোনও ক্ষতিকারক কোড আপলোড বা প্রেরণ করা যা আমাদের ওয়েবসাইট বা অন্যান্য ব্যবহারকারীর সিস্টেমের ক্ষতি করতে পারে।</li>
+          <li>অন্যান্য ব্যবহারকারীদের সম্পর্কে তাদের সম্মতি ছাড়াই ব্যক্তিগত তথ্য সংগ্রহ বা সংরক্ষণ করা।</li>
         </ul>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">4. Intellectual Property</h2>
+        <h2 className="text-xl font-bold mb-2">৪. বৌদ্ধিক সম্পত্তি</h2>
         <p className="mb-2">
-          All content on our website, including but not limited to text, graphics, logos, images, and software, is the property of our company or its licensors and is protected by copyright and other intellectual property laws. You may not use, modify, reproduce, or distribute any content from our website without our prior written consent.
+          পাঠ্য, গ্রাফিক্স, লোগো, চিত্র এবং সফ্টওয়্যার সহ আমাদের ওয়েবসাইটের সমস্ত সামগ্রী আমাদের সংস্থা বা এর লাইসেন্সকারীদের সম্পত্তি এবং কপিরাইট এবং অন্যান্য বৌদ্ধিক সম্পত্তি আইন দ্বারা সুরক্ষিত। আপনি আমাদের পূর্ব লিখিত সম্মতি ব্যতীত আমাদের ওয়েবসাইট থেকে কোনও সামগ্রী ব্যবহার, সংশোধন, পুনরুত্পাদন বা বিতরণ করতে পারবেন না।
         </p>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">5. Limitation of Liability</h2>
+        <h2 className="text-xl font-bold mb-2">৫. দায়বদ্ধতার সীমাবদ্ধতা</h2>
         <p className="mb-2">
-          Our company strives to provide accurate and up-to-date information on our website. However, we make no warranties or representations regarding the accuracy, reliability, or completeness of the information or services provided. We shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in connection with the use of our website or the services offered.
+          আমাদের সংস্থা আমাদের ওয়েবসাইটে সঠিক এবং আপ-টু-ডেট তথ্য সরবরাহ করার চেষ্টা করে। যাইহোক, আমরা প্রদত্ত তথ্য বা পরিষেবাগুলির যথার্থতা, নির্ভরযোগ্যতা বা সম্পূর্ণতা সম্পর্কিত কোনও ওয়্যারেন্টি বা উপস্থাপনা করি না। আমাদের ওয়েবসাইট বা প্রদত্ত পরিষেবাগুলির ব্যবহারের ফলে বা এর সাথে সম্পর্কিত যে কোনও প্রত্যক্ষ, অপ্রত্যক্ষ, ঘটনামূলক, বিশেষ বা ফলস্বরূপ ক্ষতির জন্য আমরা দায়বদ্ধ থাকব না।
         </p>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">6. Governing Law and Jurisdiction</h2>
+        <h2 className="text-xl font-bold mb-2">৬. পরিচালনা আইন এবং এখতিয়ার</h2>
         <p className="mb-2">
-          This Agreement shall be governed by and construed in accordance with the laws of Bangladesh. Any dispute arising out of or relating to this Agreement shall be submitted to the exclusive jurisdiction of the courts of Bangladesh.
+          এই চুক্তিটি বাংলাদেশের আইন অনুসারে পরিচালিত হবে এবং বোঝানো হবে। এই চুক্তি থেকে বা এর সাথে সম্পর্কিত যে কোনও বিরোধ বাংলাদেশের আদালতের একচেটিয়া এখতিয়ারে জমা দেওয়া হবে।
         </p>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-2">7. Modifications to the Agreement</h2>
+        <h2 className="text-xl font-bold mb-2">৭. চুক্তির পরিবর্তন</h2>
         <p className="mb-2">
-          We reserve the right to modify or update this Agreement at any time. Any changes will be effective immediately upon posting on our website. Your continued use of our website after any modifications to the Agreement constitutes your acceptance of the modified Agreement.
+          আমরা যে কোনও সময় এই চুক্তিটি সংশোধন বা আপডেট করার অধিকার সংরক্ষণ করি। যে কোনও পরিবর্তন আমাদের ওয়েবসাইটে পোস্ট করার সাথে সাথেই কার্যকর হবে। চুক্তিতে কোনও পরিবর্তনের পরে আমাদের ওয়েবসাইটের আপনার অব্যাহত ব্যবহার পরিবর্তিত চুক্তির আপনার গ্রহণযোগ্যতা গঠন করে।
         </p>
       </div>
 
       <p className="mt-8">
-        Please review this Agreement periodically for any updates or changes. If you have any questions or concerns regarding these Terms and Conditions, please contact us.
+        অনুগ্রহ করে কোনও আপডেট বা পরিবর্তনের জন্য পর্যায়ক্রমে এই চুক্তিটি পর্যালোচনা করুন। এই শর্তাবলী সম্পর্কে আপনার যদি কোনও প্রশ্ন বা উদ্বেগ থাকে তবে দয়া করে আমাদের সাথে যোগাযোগ করুন।
       </p>
       </section>
     </div>

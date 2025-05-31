@@ -1,73 +1,72 @@
-
 import React from 'react';
 
 const FraudPolicy: React.FC = () => {
   return (
     <div className="text-white font-sans p-6 max-w-4xl mx-auto">
       <section className='mt-20'>
-        <h1 className="text-2xl font-bold mb-4">Fraud Policy</h1>
+        <h1 className="text-2xl font-bold mb-4">জালিয়াতি নীতি</h1>
         
         <p className="mb-6">
-          Our company is committed to maintaining the highest standards of integrity and ethical behavior in all aspects of our operations. We take fraud prevention seriously and have implemented the following fraud policy to protect our customers and our business:
+          আমাদের কোম্পানি আমাদের কার্যক্রমের সব দিকে সর্বোচ্চ মানের সততা এবং নৈতিক আচরণ বজায় রাখতে প্রতিশ্রুতিবদ্ধ। আমরা জালিয়াতি প্রতিরোধকে গুরুত্ব সহকারে নিই এবং আমাদের গ্রাহক ও আমাদের ব্যবসাকে রক্ষা করতে নিম্নলিখিত জালিয়াতি নীতি বাস্তবায়ন করেছি:
         </p>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">1. Definition of Fraud</h2>
-          <p className="mb-2">Fraud is defined as any intentional act of deception, misrepresentation, or manipulation for the purpose of gaining an unfair advantage or causing harm to our company or our customers.</p>
+          <h2 className="text-xl font-bold mb-2">১. জালিয়াতির সংজ্ঞা</h2>
+          <p className="mb-2">জালিয়াতি হলো অন্যায় সুবিধা অর্জন বা আমাদের কোম্পানি বা আমাদের গ্রাহকদের ক্ষতি করার উদ্দেশ্যে কোনো ইচ্ছাকৃত প্রতারণা, ভুল উপস্থাপনা বা কারসাজির কাজ।</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>This includes but is not limited to: identity theft, credit card fraud, unauthorized use of accounts, falsification of information, and any other fraudulent activity.</li>
+            <li>এর অন্তর্ভুক্ত কিন্তু সীমাবদ্ধ নয়: পরিচয় চুরি, ক্রেডিট কার্ড জালিয়াতি, অ্যাকাউন্টের অননুমোদিত ব্যবহার, তথ্য জাল করা এবং অন্য যেকোনো জালিয়াতিমূলক কার্যকলাপ।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">2. Detection and Prevention</h2>
+          <h2 className="text-xl font-bold mb-2">২. সনাক্তকরণ এবং প্রতিরোধ</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>We employ advanced security measures and fraud detection systems to monitor and identify potentially fraudulent activities.</li>
-            <li>Any suspected fraudulent activity will be thoroughly investigated by our team, and appropriate action will be taken in accordance with our fraud prevention policies.</li>
+            <li>আমরা সম্ভাব্য জালিয়াতিমূলক কার্যকলাপ পর্যবেক্ষণ এবং সনাক্ত করতে উন্নত নিরাপত্তা ব্যবস্থা এবং জালিয়াতি সনাক্তকরণ সিস্টেম ব্যবহার করি।</li>
+            <li>যেকোনো সন্দেহজনক জালিয়াতিমূলক কার্যকলাপ আমাদের টিম দ্বারা পুঙ্খানুপুঙ্খভাবে তদন্ত করা হবে এবং আমাদের জালিয়াতি প্রতিরোধ নীতি অনুযায়ী যথাযথ ব্যবস্থা নেওয়া হবে।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">3. Reporting Fraud</h2>
+          <h2 className="text-xl font-bold mb-2">৩. জালিয়াতির রিপোর্ট</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>If you suspect or become aware of any fraudulent activity related to our services, we encourage you to report it immediately to our customer service team.</li>
-            <li>Provide as much detail and evidence as possible to assist us in our investigation of the fraud.</li>
+            <li>আমাদের সেবার সাথে সম্পর্কিত কোনো জালিয়াতিমূলক কার্যকলাপ সন্দেহ করলে বা জানতে পারলে, আমরা আপনাকে অবিলম্বে আমাদের গ্রাহক সেবা টিমকে রিপোর্ট করতে উৎসাহিত করি।</li>
+            <li>জালিয়াতির তদন্তে আমাদের সহায়তা করতে যতটা সম্ভব বিস্তারিত এবং প্রমাণ প্রদান করুন।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">4. Consequences of Fraud</h2>
+          <h2 className="text-xl font-bold mb-2">৪. জালিয়াতির পরিণতি</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Any individual or entity found to be engaged in fraudulent activities will be subject to legal action and may be reported to the relevant authorities.</li>
-            <li>Our company reserves the right to terminate services and take legal action against any party involved in fraudulent activities.</li>
+            <li>জালিয়াতিমূলক কার্যকলাপে জড়িত যেকোনো ব্যক্তি বা প্রতিষ্ঠান আইনি ব্যবস্থার সম্মুখীন হবে এবং সংশ্লিষ্ট কর্তৃপক্ষের কাছে রিপোর্ট করা হতে পারে।</li>
+            <li>আমাদের কোম্পানি জালিয়াতিমূলক কার্যকলাপে জড়িত যেকোনো পক্ষের বিরুদ্ধে সেবা বন্ধ এবং আইনি ব্যবস্থা নেওয়ার অধিকার সংরক্ষণ করে।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">5. Customer Responsibility</h2>
+          <h2 className="text-xl font-bold mb-2">৫. গ্রাহকের দায়িত্ব</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Customers are responsible for safeguarding their account information, passwords, and personal data to prevent unauthorized access and potential fraud.</li>
-            <li>Customers should report any suspicious activity or unauthorized transactions on their accounts promptly to our customer service team.</li>
+            <li>গ্রাহকরা অননুমোদিত প্রবেশ এবং সম্ভাব্য জালিয়াতি প্রতিরোধে তাদের অ্যাকাউন্টের তথ্য, পাসওয়ার্ড এবং ব্যক্তিগত ডেটা সুরক্ষার জন্য দায়ী।</li>
+            <li>গ্রাহকদের তাদের অ্যাকাউন্টে কোনো সন্দেহজনক কার্যকলাপ বা অননুমোদিত লেনদেন দ্রুত আমাদের গ্রাহক সেবা টিমকে রিপোর্ট করা উচিত।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">6. Cooperation with Authorities</h2>
+          <h2 className="text-xl font-bold mb-2">৬. কর্তৃপক্ষের সাথে সহযোগিতা</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Our company is committed to cooperating fully with law enforcement authorities and regulatory agencies in the investigation and prosecution of fraud cases.</li>
-            <li>We will provide any necessary information and support to assist in the resolution of fraud-related issues.</li>
+            <li>আমাদের কোম্পানি জালিয়াতি মামলার তদন্ত এবং বিচারে আইন প্রয়োগকারী কর্তৃপক্ষ এবং নিয়ন্ত্রক সংস্থাগুলির সাথে পূর্ণ সহযোগিতা করতে প্রতিশ্রুতিবদ্ধ।</li>
+            <li>আমরা জালিয়াতি-সম্পর্কিত সমস্যাগুলির সমাধানে সহায়তার জন্য যেকোনো প্রয়োজনীয় তথ্য এবং সহায়তা প্রদান করব।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">7. Confidentiality</h2>
+          <h2 className="text-xl font-bold mb-2">৭. গোপনীয়তা</h2>
           <p className="mb-2">
-            All reports of suspected fraud will be treated with the utmost confidentiality. We respect the privacy of individuals involved in fraud investigations and will handle information sensitively and securely.
+            সন্দেহজনক জালিয়াতির সব রিপোর্ট অত্যন্ত গোপনীয়তার সাথে পরিচালিত হবে। আমরা জালিয়াতি তদন্তে জড়িত ব্যক্তিদের গোপনীয়তাকে সম্মান করি এবং তথ্য সংবেদনশীলতা ও নিরাপত্তার সাথে পরিচালনা করব।
           </p>
         </div>
 
         <p className="mt-8">
-          Our fraud policy is designed to protect the interests of our customers and maintain the trust and integrity of our business operations. We appreciate your cooperation in helping us prevent and combat fraud.
+          আমাদের জালিয়াতি নীতি আমাদের গ্রাহকদের স্বার্থ রক্ষা এবং আমাদের ব্যবসায়িক কার্যক্রমের বিশ্বাস ও সততা বজায় রাখার জন্য ডিজাইন করা হয়েছে। জালিয়াতি প্রতিরোধ ও মোকাবিলায় আমাদের সহায়তা করার জন্য আমরা আপনার সহযোগিতার প্রশংসা করি।
         </p>
       </section>
     </div>
