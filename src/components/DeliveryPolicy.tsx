@@ -4,73 +4,73 @@ const DeliveryPolicy: React.FC = () => {
   return (
     <div className="text-white font-sans p-6 max-w-4xl mx-auto">
       <section className='mt-20'>
-        <h1 className="text-2xl font-bold mb-4">Delivery Policy</h1>
+        <h1 className="text-2xl font-bold mb-4">ডেলিভারি পলিসি</h1>
         
         <p className="mb-6">
-          Thank you for choosing ATC Tech Limited as your trusted provider of software development, advanced level training, basic coding training for children, cybersecurity, and artificial intelligence services. This Delivery Policy outlines the terms and conditions regarding the delivery of products and services purchased through our platform. By placing an order with us, you agree to comply with and be bound by the following policies:
+          সফটওয়্যার ডেভেলপমেন্ট, অ্যাডভান্সড লেভেল ট্রেনিং, শিশুদের জন্য বেসিক কোডিং ট্রেনিং, সাইবার সিকিউরিটি এবং আর্টিফিশিয়াল ইন্টেলিজেন্স সেবার জন্য ATC Tech Limited কে আপনার বিশ্বস্ত প্রদানকারী হিসেবে বেছে নেওয়ার জন্য ধন্যবাদ। এই ডেলিভারি পলিসি আমাদের প্ল্যাটফর্মের মাধ্যমে ক্রয়কৃত পণ্য ও সেবা সরবরাহের শর্তাবলী বর্ণনা করে। আমাদের সাথে অর্ডার দিয়ে, আপনি নিম্নলিখিত নীতিগুলি মেনে চলতে এবং এর দ্বারা আবদ্ধ হতে সম্মত হন:
         </p>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Order Processing Time</h2>
+          <h2 className="text-xl font-bold mb-2">অর্ডার প্রসেসিং সময়</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Orders are typically processed within 2-3 business days from the date of purchase.</li>
-            <li>Processing times may vary depending on the nature of the product or service.</li>
+            <li>অর্ডার সাধারণত ক্রয়ের তারিখ থেকে ২-৩ কর্মদিবসের মধ্যে প্রসেস করা হয়।</li>
+            <li>পণ্য বা সেবার প্রকৃতির উপর ভিত্তি করে প্রসেসিং সময় পরিবর্তিত হতে পারে।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Delivery Methods</h2>
+          <h2 className="text-xl font-bold mb-2">ডেলিভারি পদ্ধতি</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>We offer various delivery methods, including standard shipping, express shipping, and digital delivery, depending on the nature of the product or service.</li>
+            <li>আমরা বিভিন্ন ডেলিভারি পদ্ধতি অফার করি, যার মধ্যে স্ট্যান্ডার্ড শিপিং, এক্সপ্রেস শিপিং এবং ডিজিটাল ডেলিভারি অন্তর্ভুক্ত, পণ্য বা সেবার প্রকৃতির উপর নির্ভর করে।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Shipping Addresses</h2>
+          <h2 className="text-xl font-bold mb-2">শিপিং ঠিকানা</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>It is the responsibility of the customer to provide accurate and complete shipping information.</li>
-            <li>We are not responsible for items delivered to incorrect addresses provided by the customer.</li>
+            <li>সঠিক এবং সম্পূর্ণ শিপিং তথ্য প্রদান করা গ্রাহকের দায়িত্ব।</li>
+            <li>গ্রাহক প্রদত্ত ভুল ঠিকানায় ডেলিভারি করা আইটেমের জন্য আমরা দায়ী নই।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Shipping Restrictions</h2>
+          <h2 className="text-xl font-bold mb-2">শিপিং নিষেধাজ্ঞা</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Some products or services may have shipping restrictions based on geographic location or local regulations. Customers are responsible for checking and complying with these restrictions before placing an order.</li>
+            <li>কিছু পণ্য বা সেবার ভৌগোলিক অবস্থান বা স্থানীয় নিয়মের উপর ভিত্তি করে শিপিং নিষেধাজ্ঞা থাকতে পারে। অর্ডার দেওয়ার আগে গ্রাহকদের এই নিষেধাজ্ঞা পরীক্ষা করে মেনে চলার দায়িত্ব নিতে হবে।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Delivery Confirmation</h2>
+          <h2 className="text-xl font-bold mb-2">ডেলিভারি নিশ্চিতকরণ</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Upon successful delivery, customers will receive a confirmation email with relevant details, including tracking information (if applicable).</li>
-            <li>Digital products or services will be delivered via email or through the customer's account on our platform.</li>
+            <li>সফল ডেলিভারির পর, গ্রাহকরা প্রাসঙ্গিক বিবরণ সহ একটি নিশ্চিতকরণ ইমেইল পাবেন, যার মধ্যে ট্র্যাকিং তথ্য (যদি প্রযোজ্য) অন্তর্ভুক্ত থাকবে।</li>
+            <li>ডিজিটাল পণ্য বা সেবা ইমেইলের মাধ্যমে বা আমাদের প্ল্যাটফর্মে গ্রাহকের অ্যাকাউন্টের মাধ্যমে ডেলিভারি করা হবে।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Shipping Delays</h2>
+          <h2 className="text-xl font-bold mb-2">ডেলিভারি বিলম্ব</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>While we strive to meet all delivery timelines, unforeseen circumstances such as weather conditions, customs delays, or other external factors may cause delays. We appreciate your understanding in such situations.</li>
+            <li>যদিও আমরা সকল ডেলিভারি সময়সীমা পূরণের চেষ্টা করি, আবহাওয়া পরিস্থিতি, কাস্টমস বিলম্ব বা অন্যান্য বাহ্যিক কারণের মতো অপ্রত্যাশিত পরিস্থিতির কারণে বিলম্ব হতে পারে। এমন পরিস্থিতিতে আপনার সমঝোতার জন্য আমরা কৃতজ্ঞ।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Returns Due to Non-Delivery</h2>
+          <h2 className="text-xl font-bold mb-2">অ-ডেলিভারির কারণে ফেরত</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>If a product is returned to us due to non-delivery (e.g., incorrect address provided), the customer will be responsible for any additional shipping charges.</li>
+            <li>যদি অ-ডেলিভারির কারণে (যেমন, ভুল ঠিকানা প্রদান) একটি পণ্য আমাদের কাছে ফেরত আসে, গ্রাহক যেকোনো অতিরিক্ত শিপিং চার্জের জন্য দায়ী থাকবেন।</li>
           </ul>
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-2">Contact Information</h2>
+          <h2 className="text-xl font-bold mb-2">যোগাযোগের তথ্য</h2>
           <p className="mb-2">
-            If you have any questions or concerns regarding your order or our delivery policy, please contact our customer service team at atctechltdbd@gmail.com or +8801731805079.
+            আপনার অর্ডার বা আমাদের ডেলিভারি পলিসি সম্পর্কে কোন প্রশ্ন বা উদ্বেগ থাকলে, আমাদের গ্রাহক সেবা দলের সাথে atctechltdbd@gmail.com বা +8801731805079 নম্বরে যোগাযোগ করুন।
           </p>
         </div>
 
         <p className="mt-8">
-          Thank you for choosing ATC Tech Limited. We value your business and strive to provide you with the best service possible.
+          ATC Tech Limited কে বেছে নেওয়ার জন্য ধন্যবাদ। আমরা আপনার ব্যবসাকে মূল্য দিই এবং আপনাকে সর্বোত্তম সেবা প্রদানের জন্য প্রচেষ্টা করি।
         </p>
       </section>
     </div>
