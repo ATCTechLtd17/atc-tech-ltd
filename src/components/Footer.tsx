@@ -74,14 +74,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
           {/* Navigation Links */}
           <div className="flex flex-wrap justify-center gap-6 py-4 border-t border-white/10">
   {[
     { label: 'About Us', path: '/aboutUs' },
     { label: 'Privacy Policy, Terms & Conditions', path: '/privacy-policy-t&c' },
    
-    { label: 'Refund & Return', path: '/refund' },
+    { label: 'Refund & Return Policy', path: '/refund' },
   
     
   ].map((item) => (
